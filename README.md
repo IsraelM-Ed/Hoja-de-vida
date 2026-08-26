@@ -59,52 +59,6 @@ La imagen de perfil se coloca en el encabezado de `index1.html` usando una ruta 
      height="200">
 ```
 
-Las rutas relativas son recomendables porque funcionan aunque el proyecto se copie a otra computadora. No se deben utilizar rutas absolutas como `C:\Trabajos Uni\...`.
-
-### Imágenes de proyectos
-
-Las capturas de pantalla pueden agregarse dentro de los artículos de **Experiencia y proyectos** o **Proyectos destacados**:
-
-```html
-<figure>
-    <img src="assets/images/terrifier.png"
-         alt="Captura del videojuego Welcome to Terrifier"
-         width="500">
-    <figcaption>Captura del proyecto Welcome to Terrifier.</figcaption>
-</figure>
-```
-
-### Video
-
-Los videos demostrativos pueden incorporarse dentro del artículo del proyecto correspondiente:
-
-```html
-<video controls width="500">
-    <source src="assets/video/demostracion.mp4" type="video/mp4">
-    Tu navegador no admite videos.
-</video>
-```
-
-### Audio
-
-Los audios, narraciones o presentaciones pueden agregarse en la sección de proyectos o en una sección multimedia nueva:
-
-```html
-<audio controls>
-    <source src="assets/audio/presentacion.mp3" type="audio/mpeg">
-    Tu navegador no admite audio.
-</audio>
-```
-
-### Documentos
-
-Los certificados o documentos pueden enlazarse desde **Cursos y certificaciones**:
-
-```html
-<a href="assets/docs/certificado.pdf" target="_blank" rel="noopener">
-    Ver certificado
-</a>
-```
 
 ## Cómo visualizar el proyecto
 
