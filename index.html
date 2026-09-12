@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hoja de vida de Israel Mujia Del Castillo, estudiante de Ingeniería en Sistemas.">
-    <title>Israel Mujia Del Castillo | Hoja de vida</title>
+    <meta name="description" content="CV interactivo de Israel Mujia Del Castillo, estudiante de Ingeniería en Sistemas.">
+    <title>Israel Mujia Del Castillo | CV Profesional</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/script.js"></script>
 </head>
 <body>
     <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
 
     <header class="site-header">
-        <div class="header-content">
-            <img class="profile-photo" src="assets/foto-perfil.jpg" alt="Fotografía de Israel Mujia Del Castillo" width="220" height="220">
+        <div class="container header-content">
+            <img class="profile-photo" src="assets/foto-perfil.jpg" alt="Fotografía profesional de Israel Mujia Del Castillo" width="220" height="220">
             <div class="intro">
-                <p class="eyebrow">Hoja de vida / 2026</p>
-                <h1>Israel Mujia<br><span>Del Castillo</span></h1>
+                <p class="eyebrow">CV Profesional · 2026</p>
+                <h1>Israel Mujia <span>Del Castillo</span></h1>
                 <p class="role">Estudiante de Ingeniería en Sistemas</p>
-                <p class="summary">Construyo soluciones con curiosidad, perseverancia y una mirada creativa sobre la tecnología.</p>
+                <p class="summary">Desarrollo soluciones digitales con enfoque en programación, creatividad y aprendizaje continuo.</p>
+                <div class="header-actions">
+                    <a class="btn btn-primary" href="#contacto">Contactar</a>
+                    <button class="btn btn-secondary theme-toggle" type="button" aria-label="Cambiar tema">Tema oscuro</button>
+                </div>
             </div>
             <address class="contact-card">
                 <p><span class="contact-label">Correo</span><a href="mailto:israelmujia5@gmail.com">israelmujia5@gmail.com</a></p>
@@ -28,7 +33,7 @@
     </header>
 
     <nav class="site-nav" aria-label="Navegación principal">
-        <div class="nav-inner">
+        <div class="container nav-inner">
             <a href="#perfil">Perfil</a>
             <a href="#formacion">Formación</a>
             <a href="#experiencia">Experiencia</a>
@@ -38,16 +43,18 @@
         </div>
     </nav>
 
-    <main id="contenido-principal" class="page-shell">
+    <main id="contenido-principal" class="container main-layout">
         <section id="perfil" class="section profile-section" aria-labelledby="titulo-perfil">
             <div class="section-heading">
                 <p class="section-number">01</p>
                 <h2 id="titulo-perfil">Perfil profesional</h2>
             </div>
             <div class="profile-copy">
-                <p class="lead">Soy estudiante de segundo año de <strong>Ingeniería en Sistemas</strong> en la Universidad Católica Boliviana “San Pablo”. Me interesa comprender cómo funcionan las cosas y convertir ideas en proyectos útiles.</p>
-                <p>Me considero una persona alegre, creativa y determinada. Busco seguir creciendo en programación y desarrollo web mientras colaboro en equipos donde pueda aportar soluciones y aprender de nuevos desafíos.</p>
-                <p class="goal"><strong>Objetivo:</strong> dejar una huella mediante el trabajo, la creatividad y el crecimiento profesional constante.</p>
+                <p class="lead">Soy estudiante de <strong>Ingeniería en Sistemas</strong> en la Universidad Católica Boliviana “San Pablo”. Me interesa el diseño de soluciones tecnológicas, la programación y el aprendizaje constante en entornos digitales.</p>
+                <p>Me considero una persona alegre, creativa y perseverante. Disfruto trabajar en proyectos que combinen innovación, colaboración y pensamiento crítico para mejorar procesos y resolver necesidades reales.</p>
+                <div class="highlight-box">
+                    <strong>Objetivo profesional:</strong> desarrollar habilidades técnicas y aportar valor en proyectos de software, web y sistemas con enfoque práctico y responsable.
+                </div>
             </div>
         </section>
 
@@ -64,9 +71,9 @@
                     <p class="muted">Cuarto semestre · Licenciatura en Ingeniería de Sistemas</p>
                 </article>
                 <article class="timeline-item">
-                    <p class="date">Educación escolar</p>
+                    <p class="date">Educación secundaria</p>
                     <h3>Colegio Vida y Verdad</h3>
-                    <p class="muted">Formación secundaria</p>
+                    <p class="muted">Formación básica y secundaria</p>
                 </article>
             </section>
 
@@ -75,20 +82,35 @@
                     <p class="section-number">03</p>
                     <h2 id="titulo-experiencia">Experiencia y proyectos</h2>
                 </div>
+
                 <article class="project-item">
                     <div class="project-meta"><span>2025</span><span>C++</span></div>
                     <h3>Welcome to Terrifier</h3>
-                    <p>Programador asistente en un videojuego 2D de temática de terror, desarrollado como proyecto académico colaborativo.</p>
+                    <p>Programador asistente en un videojuego 2D de temática de terror, aplicado como proyecto académico colaborativo.</p>
+                    <button type="button" class="details-toggle" data-target="project-1">Mostrar detalle</button>
+                    <div id="project-1" class="project-detail" hidden>
+                        Participé en tareas de programación y desarrollo del proyecto, reforzando trabajo en equipo, lógica de juego y resolución de problemas.
+                    </div>
                 </article>
+
                 <article class="project-item">
                     <div class="project-meta"><span>2025</span><span>Java</span></div>
                     <h3>Stargazers</h3>
-                    <p>Participación en el desarrollo de un proyecto académico orientado a fortalecer la programación y el trabajo en equipo.</p>
+                    <p>Proyecto académico orientado a fortalecer la programación, el análisis y la experiencia del usuario.</p>
+                    <button type="button" class="details-toggle" data-target="project-2">Mostrar detalle</button>
+                    <div id="project-2" class="project-detail" hidden>
+                        El proyecto fue una oportunidad para aplicar conceptos de lógica, estructura de datos y programación orientada a objetos.
+                    </div>
                 </article>
+
                 <article class="project-item">
                     <div class="project-meta"><span>2025</span><span>Web</span></div>
-                    <h3>Port web de Welcome to Terrifier</h3>
-                    <p>Colaboración en la adaptación de un videojuego originalmente desarrollado en C++ para su ejecución en un entorno web.</p>
+                    <h3>Adaptación web de Welcome to Terrifier</h3>
+                    <p>Colaboración en la adaptación del juego a una experiencia web, con enfoque en experiencia de usuario y presentación visual.</p>
+                    <button type="button" class="details-toggle" data-target="project-3">Mostrar detalle</button>
+                    <div id="project-3" class="project-detail" hidden>
+                        Esta experiencia me ayudó a comprender mejor la transformación de conceptos desde lógica de programación hacia una interfaz accesible y funcional.
+                    </div>
                 </article>
             </section>
         </div>
@@ -101,15 +123,31 @@
             <div class="skills-flex">
                 <article class="skill-group">
                     <h3>Técnicas</h3>
-                    <ul class="tag-list"><li>C++</li><li>Java</li><li>Python</li><li>HTML5</li><li>CSS3</li></ul>
-                </article>
-                <article class="skill-group">
-                    <h3>Herramientas</h3>
-                    <ul class="tag-list"><li>Visual Studio Code</li><li>Git</li><li>GitHub</li></ul>
+                    <ul class="tag-list">
+                        <li>C++</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>Git</li>
+                    </ul>
                 </article>
                 <article class="skill-group">
                     <h3>Profesionales</h3>
-                    <ul class="plain-list"><li>Perseverancia</li><li>Creatividad</li><li>Resolución de problemas</li></ul>
+                    <ul class="plain-list">
+                        <li>Perseverancia</li>
+                        <li>Creatividad</li>
+                        <li>Resolución de problemas</li>
+                        <li>Trabajo en equipo</li>
+                    </ul>
+                </article>
+                <article class="skill-group">
+                    <h3>Herramientas</h3>
+                    <ul class="tag-list">
+                        <li>Visual Studio Code</li>
+                        <li>GitHub</li>
+                        <li>Figma</li>
+                    </ul>
                 </article>
             </div>
         </section>
@@ -123,10 +161,27 @@
                 <div class="table-wrap">
                     <table>
                         <caption>Nivel de dominio por idioma</caption>
-                        <thead><tr><th scope="col">Idioma</th><th scope="col">Lectura</th><th scope="col">Escritura</th><th scope="col">Conversación</th></tr></thead>
+                        <thead>
+                            <tr>
+                                <th scope="col">Idioma</th>
+                                <th scope="col">Lectura</th>
+                                <th scope="col">Escritura</th>
+                                <th scope="col">Conversación</th>
+                            </tr>
+                        </thead>
                         <tbody>
-                            <tr><th scope="row">Español</th><td>Avanzado</td><td>Avanzado</td><td>Nativo</td></tr>
-                            <tr><th scope="row">Inglés</th><td>Avanzado</td><td>Avanzado</td><td>Avanzado</td></tr>
+                            <tr>
+                                <th scope="row">Español</th>
+                                <td>Avanzado</td>
+                                <td>Avanzado</td>
+                                <td>Nativo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Inglés</th>
+                                <td>Avanzado</td>
+                                <td>Avanzado</td>
+                                <td>Avanzado</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -137,14 +192,27 @@
                     <p class="section-number">06</p>
                     <h2 id="titulo-contacto">Contacto</h2>
                 </div>
-                <p id="descripcion-formulario" class="muted">¿Tienes una idea o una oportunidad? Escríbeme.</p>
-                <form action="#" method="post" aria-describedby="descripcion-formulario">
+                <p id="descripcion-formulario" class="muted">Si deseas colaborar o discutir oportunidades, escribe un mensaje.</p>
+                <form id="contact-form" novalidate aria-describedby="descripcion-formulario">
                     <div class="form-row">
-                        <div><label for="nombre">Nombre completo</label><input type="text" id="nombre" name="nombre" autocomplete="name" minlength="2" required></div>
-                        <div><label for="correo">Correo electrónico</label><input type="email" id="correo" name="correo" autocomplete="email" required></div>
+                        <div>
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" autocomplete="name" minlength="2" maxlength="120" required>
+                            <small class="error-message" data-error-for="nombre"></small>
+                        </div>
+                        <div>
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" name="correo" autocomplete="email" maxlength="150" required>
+                            <small class="error-message" data-error-for="correo"></small>
+                        </div>
                     </div>
-                    <div><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" rows="4" minlength="10" maxlength="1000" required></textarea></div>
-                    <button type="submit">Enviar mensaje <span aria-hidden="true">→</span></button>
+                    <div>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" minlength="10" maxlength="1000" required></textarea>
+                        <small class="error-message" data-error-for="mensaje"></small>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar mensaje <span aria-hidden="true">→</span></button>
+                    <p id="form-status" class="form-status" aria-live="polite"></p>
                 </form>
             </section>
         </div>
@@ -152,7 +220,7 @@
 
     <footer class="site-footer">
         <p><strong>Israel Mujia Del Castillo</strong> · Ingeniería en Sistemas</p>
-        <p><small>Última actualización: <time datetime="2026-09-05">5 de septiembre de 2026</time></small></p>
+        <p><small>Última actualización: <time id="year" datetime="2026-09-12">2026</time></small></p>
         <a href="#contenido-principal">Volver arriba ↑</a>
     </footer>
 </body>
