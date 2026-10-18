@@ -21,7 +21,7 @@
                 <p class="summary">Desarrollo soluciones digitales con enfoque en programación, creatividad y aprendizaje continuo.</p>
                 <div class="header-actions">
                     <a class="btn btn-primary" href="#contacto">Contactar</a>
-                    <button class="btn btn-secondary theme-toggle" type="button" aria-label="Cambiar tema">Tema oscuro</button>
+                    <button class="btn btn-secondary theme-toggle" type="button" aria-pressed="false">Tema oscuro</button>
                 </div>
             </div>
             <address class="contact-card">
@@ -34,12 +34,18 @@
 
     <nav class="site-nav" aria-label="Navegación principal">
         <div class="container nav-inner">
-            <a href="#perfil">Perfil</a>
-            <a href="#formacion">Formación</a>
-            <a href="#experiencia">Experiencia</a>
-            <a href="#habilidades">Habilidades</a>
-            <a href="#idiomas">Idiomas</a>
-            <a href="#contacto">Contacto</a>
+            <button class="nav-toggle" type="button" aria-controls="nav-links" aria-expanded="false" hidden>
+                <span class="nav-toggle-icon" aria-hidden="true">☰</span>
+                <span>Menú</span>
+            </button>
+            <div id="nav-links" class="nav-links">
+                <a href="#perfil">Perfil</a>
+                <a href="#formacion">Formación</a>
+                <a href="#experiencia">Experiencia</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#idiomas">Idiomas</a>
+                <a href="#contacto">Contacto</a>
+            </div>
         </div>
     </nav>
 
@@ -82,36 +88,52 @@
                     <p class="section-number">03</p>
                     <h2 id="titulo-experiencia">Experiencia y proyectos</h2>
                 </div>
+                <label class="project-search-label" for="project-search">Buscar proyectos</label>
+                <input id="project-search" class="project-search" type="search" autocomplete="off" placeholder="Filtrar por nombre o tecnología" aria-describedby="project-count">
+                <p id="project-count" class="muted" aria-live="polite">Se muestran todos los proyectos.</p>
 
-                <article class="project-item">
+                <article class="project-item" data-project>
                     <div class="project-meta"><span>2025</span><span>C++</span></div>
                     <h3>Welcome to Terrifier</h3>
                     <p>Programador asistente en un videojuego 2D de temática de terror, aplicado como proyecto académico colaborativo.</p>
-                    <button type="button" class="details-toggle" data-target="project-1">Mostrar detalle</button>
+                    <button type="button" class="details-toggle" data-target="project-1" aria-expanded="false">Mostrar detalle</button>
                     <div id="project-1" class="project-detail" hidden>
                         Participé en tareas de programación y desarrollo del proyecto, reforzando trabajo en equipo, lógica de juego y resolución de problemas.
                     </div>
                 </article>
 
-                <article class="project-item">
+                <article class="project-item" data-project>
                     <div class="project-meta"><span>2025</span><span>Java</span></div>
                     <h3>Stargazers</h3>
                     <p>Proyecto académico orientado a fortalecer la programación, el análisis y la experiencia del usuario.</p>
-                    <button type="button" class="details-toggle" data-target="project-2">Mostrar detalle</button>
+                    <button type="button" class="details-toggle" data-target="project-2" aria-expanded="false">Mostrar detalle</button>
                     <div id="project-2" class="project-detail" hidden>
                         El proyecto fue una oportunidad para aplicar conceptos de lógica, estructura de datos y programación orientada a objetos.
                     </div>
                 </article>
 
-                <article class="project-item">
+                <article class="project-item" data-project>
                     <div class="project-meta"><span>2025</span><span>Web</span></div>
                     <h3>Adaptación web de Welcome to Terrifier</h3>
                     <p>Colaboración en la adaptación del juego a una experiencia web, con enfoque en experiencia de usuario y presentación visual.</p>
-                    <button type="button" class="details-toggle" data-target="project-3">Mostrar detalle</button>
+                    <button type="button" class="details-toggle" data-target="project-3" aria-expanded="false">Mostrar detalle</button>
                     <div id="project-3" class="project-detail" hidden>
                         Esta experiencia me ayudó a comprender mejor la transformación de conceptos desde lógica de programación hacia una interfaz accesible y funcional.
                     </div>
                 </article>
+                <aside class="github-card" aria-labelledby="github-heading">
+                    <h3 id="github-heading">Explora repositorios de GitHub</h3>
+                    <p class="muted">Consulta repositorios públicos indicando un nombre de usuario.</p>
+                    <form id="github-form" class="github-search-form">
+                        <label for="github-username">Usuario de GitHub</label>
+                        <div class="github-search-control">
+                            <input id="github-username" name="github-username" type="text" autocomplete="off" maxlength="39" pattern="[A-Za-z0-9]+(-[A-Za-z0-9]+)*" aria-describedby="github-status" required>
+                            <button class="submit-btn" type="submit">Buscar</button>
+                        </div>
+                    </form>
+                    <p id="github-status" class="github-status" role="status" aria-live="polite">Ingresa un usuario para consultar hasta tres repositorios públicos.</p>
+                    <ul id="github-repositories" class="github-repositories"></ul>
+                </aside>
             </section>
         </div>
 
@@ -197,19 +219,19 @@
                     <div class="form-row">
                         <div>
                             <label for="nombre">Nombre completo</label>
-                            <input type="text" id="nombre" name="nombre" autocomplete="name" minlength="2" maxlength="120" required>
-                            <small class="error-message" data-error-for="nombre"></small>
+                            <input type="text" id="nombre" name="nombre" autocomplete="name" minlength="2" maxlength="120" aria-describedby="error-nombre" required>
+                            <small class="error-message" id="error-nombre" data-error-for="nombre"></small>
                         </div>
                         <div>
                             <label for="correo">Correo electrónico</label>
-                            <input type="email" id="correo" name="correo" autocomplete="email" maxlength="150" required>
-                            <small class="error-message" data-error-for="correo"></small>
+                            <input type="email" id="correo" name="correo" autocomplete="email" maxlength="150" aria-describedby="error-correo" required>
+                            <small class="error-message" id="error-correo" data-error-for="correo"></small>
                         </div>
                     </div>
                     <div>
                         <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" minlength="10" maxlength="1000" required></textarea>
-                        <small class="error-message" data-error-for="mensaje"></small>
+                        <textarea id="mensaje" name="mensaje" rows="5" minlength="10" maxlength="1000" aria-describedby="error-mensaje" required></textarea>
+                        <small class="error-message" id="error-mensaje" data-error-for="mensaje"></small>
                     </div>
                     <button type="submit" class="submit-btn">Enviar mensaje <span aria-hidden="true">→</span></button>
                     <p id="form-status" class="form-status" aria-live="polite"></p>
