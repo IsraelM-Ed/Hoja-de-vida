@@ -36,7 +36,7 @@ Después visita `http://localhost:8000`.
 
 ## Publicación
 
-Para publicar en GitHub Pages, sube esta carpeta a un repositorio público y configura **Settings → Pages → Deploy from a branch**, seleccionando la rama principal y la carpeta raíz. La URL de producción depende del usuario y del nombre final del repositorio; añádela aquí después de habilitar Pages:
+El sitio se publica desde la rama `gh-pages` del repositorio público:
 
-- **Repositorio:** pendiente de publicación.
-- **Sitio:** pendiente de despliegue en GitHub Pages.
+- **Repositorio:** https://github.com/IsraelM-Ed/Hoja-de-vida
+- **Sitio:** https://israelm-ed.github.io/Hoja-de-vida/
